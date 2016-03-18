@@ -33,7 +33,8 @@
       </pre>
     </div>
       <button type="button" class="btn btn-default" onclick="btnEdit()">edit</button>
-      <button type="button" class="btn btn-default" onclick="btnCopy()">Copr</button>
+      <button type="button" class="btn btn-default" onclick="btnCopy()">Copy</button>
+      <button type="button" class="btn btn-default" onclick="btnDelete()">Delete</button>
     <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -50,8 +51,12 @@
 
     function btnCopy(){
         var reply_text = $('#reply_001').text();
-        $('pre:last').after('<pre>'+reply_text+'</pre>');
+        $('div > pre:last').after('<pre>'+reply_text+'</pre>');
 
+    }
+
+    function btnDelete(){
+        $('div > pre:first').remove();
     }
     </script>
 
