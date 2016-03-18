@@ -31,6 +31,10 @@
             $$    $$/ $$ |                                                                                                    $$    $$/
              $$$$$$/  $$/                                                                                                      $$$$$$/
       </pre>
+
+    </div>
+    <div id="reply-copy">
+        
     </div>
       <button type="button" class="btn btn-default" onclick="btnEdit()">edit</button>
       <button type="button" class="btn btn-default" onclick="btnCopy()">Copy</button>
@@ -51,14 +55,14 @@
 
     function btnCopy(){
         var reply_text = $('#reply_001').text();
-        $('div > pre:last').after('<pre>'+reply_text+'</pre>');
+        $('#reply-copy').after('<pre>'+reply_text+'</pre>');
 
     }
 
     function btnDelete(){
-        $('div > pre:first').remove();
+        $('#reply-copy > pre:first').remove();
     }
     </script>
 
   </body>
-</html> 
+</html>
